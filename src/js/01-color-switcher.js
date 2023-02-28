@@ -15,3 +15,9 @@ btnStart.addEventListener('click', () => {
     document.body.style.background = getRandomHexColor();
   }, 1000);
 });
+
+btnStop.addEventListener('click', () => {
+  btnStart.disabled = false;
+  btnStop.disabled = true;
+  clearInterval(timerId);
+});
