@@ -7,9 +7,15 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #2196f3;
   color: #212121;
   line-height: 1.5;
+}
+
+a {
+  box-sizing: border-box;
+  font-size: large;
+  text-decoration: none;
 }
 
 img {
@@ -17,11 +23,33 @@ img {
   max-width: 100%;
 }
 
+#datetime-picker {
+  box-sizing: border-box;
+  font-size: large;
+  font-weight: 700;
+}
+
+button {
+  box-sizing: border-box;
+  font-size: large;
+}
+
 .timer {
   display: flex;
+  gap: 20px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
+}
+
+.value {
+  font-size: xxx-large;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
