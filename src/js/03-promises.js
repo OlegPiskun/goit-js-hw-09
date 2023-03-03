@@ -18,3 +18,22 @@ function createPromise(position, delay) {
   });
   return promise;
 }
+
+btnCreatePromise.addEventListener('click', e => {
+  e.preventDefault();
+  let firstDelay = Number(delay.value);
+  let delayStep = Number(step.value);
+  for (let i = 0; i < amount.value; i += 1) {
+    createPromise(1 + i, firstDelay + i * delayStep)
+      .then(({ position, delay }) => {
+        Notiflix.Notify.success(
+          `✅ Fulfilled promise ${position} in ${delay}ms`
+        );
+      })
+      .catch(({ position, delay }) => {
+        Notiflix.Notify.failure(
+          `❌ Rejected promise ${position} in ${delay}ms`
+        );
+      });
+  }
+});
